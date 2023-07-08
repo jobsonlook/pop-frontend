@@ -1,21 +1,8 @@
 import axiosHttp from './axios'
 import i18n from '@/i18n/i18n'
-import { Divider, Toast } from 'antd-mobile'
-
-import { getSign } from '@/utils/utils'
 
 export default {
   async request(options: any, toast = true, needSign = false) {
-    if (needSign) {
-      let { data } = options
-      const now = new Date().getTime()
-      data['timestamp'] = now
-      let sign: any = getSign(data)
-
-      options['data']['signData'] = sign
-      options['data']['timestamp'] = now
-    }
-
     const startTime = Date.now()
     const t = setTimeout(() => {
       console.error(
@@ -61,17 +48,17 @@ export default {
               content = i18n.t('share.networkerror')
               break
           }
-          Toast.show({
-            icon: 'fail',
-            content: content,
-            position: 'top',
-          })
+          // Toast.show({
+          //   icon: 'fail',
+          //   content: content,
+          //   position: 'top',
+          // })
         } else {
-          Toast.show({
-            icon: 'fail',
-            content: i18n.t('share.networkerror'),
-            position: 'top',
-          })
+          // Toast.show({
+          //   icon: 'fail',
+          //   content: i18n.t('share.networkerror'),
+          //   position: 'top',
+          // })
         }
       }
 
