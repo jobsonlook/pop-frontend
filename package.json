@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ydjw.github.io/jwc",
+  "homepage": "https://jobsonlook.github.io/pop-frontend",
   "scripts": {
     "dev": "vite --host",
     "build:dev": "NODE_ENV=production tsc && BUILD_ENV=dev  vite build --mode dev",
